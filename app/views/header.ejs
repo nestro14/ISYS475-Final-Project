@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title><%-title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javascript">
+        $(document).ready(function(){
+            $('.slider').slick({
+                dots: true,
+		  		      infinite: true,
+				        speed: 300,
+				        slidesToShow: 1,
+        				adaptiveHeight: true,
+        				arrows: true
+            });
+            $('.slider2').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                arrows: true
+            });
+        });
+    </script>
+</head>
+<body>
+  <h1><%-title %></h1>
+  <h2>Welcome to San Francisco 49ers Stats - 2014</h2>
+  <h3>Created by:
+  <br>
+  Nestor Ceron & William Rames</h3>

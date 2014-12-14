@@ -1,0 +1,226 @@
+<% include header %>
+
+<div class="block">
+	<p>
+		This Node.js site illustrates the SF 49ers' Offensive player stats for the the year 2014 up until the first week of December. This Below you will find two carousels tah that show the stats and the key for what each category means. 
+</div>
+
+<div class="slider">
+  <div class="center">
+  	  <h1>Passing</h1>
+	  <table class="tg">
+			  <tr>
+			    <th class="tg-58iv">Name</th>
+			    <th class="tg-58iv">ATT</th>
+			    <th class="tg-58iv">COMP</th>
+			    <th class="tg-58iv">PCT</th>
+			    <th class="tg-58iv">YDS</th>
+			    <th class="tg-58iv">AVG</th>
+			    <th class="tg-58iv">YDS/G</th>
+			    <th class="tg-58iv">LONG/G</th>
+			    <th class="tg-58iv">TD</th>
+			  </tr>
+	  <% for(var i=0; i < players.length; i++){ %>
+		  <% if(players[i].CATEGORY === "PASSING"){ %>
+			  <tr>
+			    <td class="tg-ugh9"><%= players[i].NAME %></td>
+			    <td class="tg-ugh9"><%= players[i].ATT %></td>
+			    <td class="tg-ugh9"><%= players[i].COMP %></td>
+			    <td class="tg-ugh9"><%= players[i].PCT %></td>
+			    <td class="tg-ugh9"><%= players[i].YDS %></td>
+			    <td class="tg-ugh9"><%= players[i].AVG %></td>
+			    <td class="tg-ugh9"><%= players[i]["YDS/G"] %></td>
+			    <td class="tg-ugh9"><%= players[i].LONG %></td>
+			    <td class="tg-ugh9"><%= players[i].TD %></td>
+			  </tr>
+		  <% } %>
+	  <% } %>
+	  </table>
+  </div>
+
+  <div class="center">
+  	  <h1>Rushing</h1>
+	  <table class="tg">
+			  <tr>
+			    <th class="tg-58iv">Name</th>
+			    <th class="tg-58iv">ATT</th>
+			    <th class="tg-58iv">YDS</th>
+			    <th class="tg-58iv">AVG</th>
+			    <th class="tg-58iv">LONG</th>
+			    <th class="tg-58iv">20+</th>
+			    <th class="tg-58iv">TD</th>
+			    <th class="tg-58iv">YDS/G</th>
+			    <th class="tg-58iv">FUM</th>
+			  </tr>
+	  <% for(var i=0; i < players.length; i++){ %>
+		  <% if(players[i].CATEGORY === "RUSHING"){ %>
+		  <tr>
+			    <td class="tg-ugh9"><%= players[i].NAME %></td>
+			    <td class="tg-ugh9"><%= players[i].ATT %></td>
+			    <td class="tg-ugh9"><%= players[i].COMP %></td>
+			    <td class="tg-ugh9"><%= players[i].PCT %></td>
+			    <td class="tg-ugh9"><%= players[i].YDS %></td>
+			    <td class="tg-ugh9"><%= players[i].AVG %></td>
+			    <td class="tg-ugh9"><%= players[i]["YDS/G"] %></td>
+			    <td class="tg-ugh9"><%= players[i].LONG %></td>
+			    <td class="tg-ugh9"><%= players[i].TD %></td>
+			  </tr>
+		  <% } %>
+	  <% } %>
+	  </table>
+  </div>
+
+  <div class="center"> 
+  	  <h1>Recieving</h1>
+	  <table class="tg">
+			  <tr>
+			    <th class="tg-58iv">Name</th>
+			    <th class="tg-58iv">REC</th>
+			    <th class="tg-58iv">TAR</th>
+			    <th class="tg-58iv">YDS</th>
+			    <th class="tg-58iv">AVG</th>
+			    <th class="tg-58iv">TD</th>
+			    <th class="tg-58iv">LONG</th>
+			    <th class="tg-58iv">20+</th>
+			    <th class="tg-58iv">YDS/G</th>
+			  </tr>
+	  <% for(var i=0; i < players.length; i++){ %>
+		  <% if(players[i].CATEGORY === "RECEIVING"){ %>
+			 <tr>
+			    <td class="tg-ugh9"><%= players[i].NAME %></td>
+			    <td class="tg-ugh9"><%= players[i].ATT %></td>
+			    <td class="tg-ugh9"><%= players[i].COMP %></td>
+			    <td class="tg-ugh9"><%= players[i].PCT %></td>
+			    <td class="tg-ugh9"><%= players[i].YDS %></td>
+			    <td class="tg-ugh9"><%= players[i].AVG %></td>
+			    <td class="tg-ugh9"><%= players[i]["YDS/G"] %></td>
+			    <td class="tg-ugh9"><%= players[i].LONG %></td>
+			    <td class="tg-ugh9"><%= players[i].TD %></td>
+			  </tr>
+		  <% } %>
+	  <% } %>
+	  </table>
+  </div>
+</div>
+<hr>
+<h1>Key<h1>
+<div class="slider2">
+	<div class="center">
+		<table class="tg">
+		<tr>
+		<th colspan="2" class="tg-58iv">Passing</th>
+		</tr>
+		  <tr>
+		    <td>ATT</td>
+		    <td>Passing attempts</td>
+		  </tr>
+		  <tr>
+		    <td>COMP</td>
+		    <td>Completions</td>
+		  </tr>
+		  <tr>
+		    <td>PCT</td>
+		    <td>Gross passing yards</td>
+		  </tr>
+		  <tr>
+		    <td>YDS</td>
+		    <td>Completion percentage</td>
+		  </tr>
+		  <tr>
+		    <td>AVG</td>
+		    <td>Yards per pass attempt</td>
+		  </tr>
+		  <tr>
+		    <td>YDS/G</td>
+		    <td>Net passing yards per game</td>
+		  </tr>
+		  <tr>
+		    <td>LONG</td>
+		    <td>Longest pass</td>
+		  </tr>
+		  <tr>
+		    <td>TD</td>
+		    <td>Passing touchdowns</td>
+		  </tr>
+		  </table>
+	</div>
+	<div class="center">
+	  <table class="tg">
+		<tr>
+		<th colspan="2" class="tg-58iv">Rushing</th>
+		</tr>
+		  <tr>
+		    <td>ATT</td>
+		    <td>Rushing attempts</td>
+		  </tr>
+		  <tr>
+		    <td>YDS</td>
+		    <td>Rushing Yards</td>
+		  </tr>
+		  <tr>
+		    <td>AVG</td>
+		    <td>Yards per rush attempt</td>
+		  </tr>
+		  <tr>
+		    <td>LONG</td>
+		    <td>Longest rush</td>
+		  </tr>
+		  <tr>
+		    <td>20+</td>
+		    <td>Carries over 20 yards</td>
+		  </tr>
+		  <tr>
+		    <td>TD</td>
+		    <td>Rushing touchdowns</td>
+		  </tr>
+		  <tr>
+		    <td>YDS/G</td>
+		    <td>Rushing yards per game</td>
+		  </tr>
+		  <tr>
+		    <td>FUM</td>
+		    <td>Rushing fumbles</td>
+		  </tr>
+	  </table>
+	</div>
+	<div class="center">
+		<table class="tg">
+		<tr>
+		<th colspan="2" class="tg-58iv">Receiving</th>
+		</tr>
+		  <tr>
+		    <td>REC</td>
+		    <td>Receptions</td>
+		  </tr>
+		  <tr>
+		    <td>TAR</td>
+		    <td>Receiving targets</td>
+		  </tr>
+		  <tr>
+		    <td>YDS</td>
+		    <td>Receiving yards</td>
+		  </tr>
+		  <tr>
+		    <td>AVG</td>
+		    <td>Average yards per reception</td>
+		  </tr>
+		  <tr>
+		    <td>TD</td>
+		    <td>Receiving touchdowns</td>
+		  </tr>
+		  <tr>
+		    <td>LONG</td>
+		    <td>Longest Reception</td>
+		  </tr>
+		  <tr>
+		    <td>20+</td>
+		    <td>Receptions over 20 yards</td>
+		  </tr>
+		  <tr>
+		    <td>YDS/G</td>
+		    <td>Receiving yards per game</td>
+		  </tr>
+		  </table>
+	</div>
+</div>
+<% include footer %>
